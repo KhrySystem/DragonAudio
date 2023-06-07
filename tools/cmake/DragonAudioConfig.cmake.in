@@ -1,0 +1,21 @@
+@PACKAGE_INIT@
+
+include(CMakeFindDependencyMacro)
+find_dependency(Dragon REQUIRED)
+set(OpenAL_DIR "${PACKAGE_PREFIX_DIR}/..OpenAL)
+find_dependency(OpenAL)
+
+set_and_check(DragonAudio_INCLUDE_DIR "${PACKAGE_PREFIX_DIR}/@CMAKE_INSTALL_INCLUDEDIR@")
+set_and_check(DragonAudio_LIBRARY "${PACKAGE_PREFIX_DIR}/@CMAKE_INSTALL_LIBDIR@/@DragonAudio_LIB_NAME@@CMAKE_SHARED_LIBRARY_SUFFIX@")
+mark_as_advanced(DragonAudio_LIBRARY)
+
+if(NOT TARGET Dragon::Audio)
+	add_library(Dragon::Audio UNKNOWN IMPORTED)
+	set_target_properties(Dragon::Audio PROPERTIES
+		IMPORTED_LOCATION "${DragonAudio_LIBRARY}"
+		INTERFACE_INCLUDE_DIRECTORIES "${Dragon_INCLUDE_DIR};${DragonAudio_INCLUDE_DIR};${OpenAL-Soft}"
+		INTERFACE_LINK_LIBRARIES "${Dragon_LINK_LIBRARIES};OpenAL"
+	)
+endif()
+
+list(APPEND DragonAudio_LINK_LIBRARIES Dragon::Compute)

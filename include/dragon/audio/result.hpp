@@ -1,6 +1,3 @@
 #pragma once
-#include "audio_core.hpp"
+#include "audio_core.h"
 
-enum DgAudioResult {
-	DG_AUDIO_SUCCESS
-};

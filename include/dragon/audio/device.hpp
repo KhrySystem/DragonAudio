@@ -1,7 +1,7 @@
 #pragma once
-#include "audio_core.hpp"
+#include "audio_core.h"
 
 struct DgAudioDevice {
-	ALCdevice device;
-	ALCcontext context;
+	ALCdevice* device;
+	ALCcontext* context;
 };

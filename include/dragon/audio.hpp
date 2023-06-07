@@ -1,7 +1,6 @@
 #pragma once
 
-#include "audio/device.hpp"
-#include "audio/engine.hpp"
-#include "audio/result.hpp"
+#include "audio/device.h"
+#include "audio/engine.h"
+#include "audio/result.h"
 
-DGAPI DgAudioResult dgCreateAudioEngine(std::shared_ptr<DgAudioEngine> pAudioEngine);

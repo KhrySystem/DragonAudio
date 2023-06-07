@@ -1,5 +1,5 @@
-#include <dragon/audio.hpp>
-
+#include <dragon/audio.h>
+#include <stdio.h>
 
 static void list_audio_devices(const ALCchar* devices)
 {
@@ -17,7 +17,7 @@ static void list_audio_devices(const ALCchar* devices)
     fprintf(stdout, "----------\n");
 }
 
-DGAPI DgAudioResult dgCreateAudioEngine(std::shared_ptr<DgAudioEngine> pAudioEngine) {
+DGAPI DgResult dgCreateAudioEngine(DgAudioEngineCreateInfo createInfo, DgAudioEngine* pEngine) {
 	ALboolean enumeration = alcIsExtensionPresent(NULL, "ALC_ENUMERATION_EXT");
 	if (enumeration) {
 
@@ -25,5 +25,5 @@ DGAPI DgAudioResult dgCreateAudioEngine(std::shared_ptr<DgAudioEngine> pAudioEng
 	else {
 
 	}
-	return DG_AUDIO_SUCCESS;
+	return DG_SUCCESS;
 }

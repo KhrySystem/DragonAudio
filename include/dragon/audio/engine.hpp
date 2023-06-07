@@ -1,6 +1,13 @@
-#include "audio_core.hpp"
-#include "device.hpp"
+#include "audio_core.h"
+#include "device.h"
+
+struct DgAudioEngineCreateInfo {
+	
+};
 
 struct DgAudioEngine {
-	std::vector<DgAudioDevice> devices;
+	uint deviceCount;
+	DgAudioDevice* pDevices; // Multiple Devices
 };
+
+DGAPI DgResult dgCreateAudioEngine(DgAudioEngineCreateInfo createInfo, DgAudioEngine* pAudioEngine);
