@@ -1,5 +1,5 @@
 #pragma once
-#include "audio_core.h"
+#include "audio_core.hpp"
 
 struct DgAudioDevice {
 	ALCdevice* device;

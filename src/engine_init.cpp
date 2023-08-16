@@ -1,4 +1,4 @@
-#include <dragon/audio.h>
+#include <dragon/audio.hpp>
 #include <stdio.h>
 
 static void list_audio_devices(const ALCchar* devices)

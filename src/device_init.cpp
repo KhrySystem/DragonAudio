@@ -1,4 +1,4 @@
-#include <dragon/audio.h>
+#include <dragon/audio.hpp>
 
 DGAPI DgResult dgCreateAudioDevice(std::shared_ptr<DgAudioDevice> pAudioDevice, ALCchar* pName) {
 	alGetError();

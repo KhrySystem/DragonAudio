@@ -1,11 +1,14 @@
-#include "audio_core.h"
-#include "device.h"
+#pragma once
+
+#include "audio_core.hpp"
+#include "device.hpp"
 
 struct DgAudioEngineCreateInfo {
 	
 };
 
 struct DgAudioEngine {
+	uint32_t ENGINE_TYPE;
 	uint deviceCount;
 	DgAudioDevice* pDevices; // Multiple Devices
 };

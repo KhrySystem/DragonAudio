@@ -1,7 +1,6 @@
 #pragma once
 
-#include <dragon/dragon_core.hpp>
-#include <dragon/result.hpp>
+#include <dragon/core.hpp>
 
 #include <AL/alc.h>
 #include <AL/al.h>

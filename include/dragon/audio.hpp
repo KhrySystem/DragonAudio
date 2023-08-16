@@ -1,6 +1,5 @@
 #pragma once
 
-#include "audio/device.h"
-#include "audio/engine.h"
-#include "audio/result.h"
+#include "audio/device.hpp"
+#include "audio/engine.hpp"
 
