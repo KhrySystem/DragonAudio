@@ -9,7 +9,7 @@ struct DgAudioEngineCreateInfo {
 
 struct DgAudioEngine {
 	uint32_t ENGINE_TYPE;
-	uint deviceCount;
+	size_t deviceCount;
 	DgAudioDevice* pDevices; // Multiple Devices
 };
 
