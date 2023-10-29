@@ -19,7 +19,7 @@ set(ALSOFT_INSTALL_AMBDEC_PRESETS ${Dragon_INSTALL})
 set(ALSOFT_INSTALL_EXAMPLES ${Dragon_INSTALL})
 set(ALSOFT_INSTALL_UTILS ${Dragon_INSTALL})
 
-add_subdirectory(external/openal-soft)
+#add_subdirectory(external/openal-soft)
 
 if(DragonAudio_INSTALL)
     #include(tools/cmake/install.cmake)
