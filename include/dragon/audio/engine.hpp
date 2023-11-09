@@ -1,16 +1,23 @@
 #pragma once
 
-#include "audio_core.hpp"
+#include <AL/alc.h>
+#include <AL/al.h>
+#include <AL/alext.h>
+#include <AL/efx-creative.h>
+#include <AL/efx-presets.h>
+#include <AL/efx.h>
+
 #include "device.hpp"
 
-struct DgAudioEngineCreateInfo {
-	
-};
 
-struct DgAudioEngine {
-	uint32_t ENGINE_TYPE;
-	size_t deviceCount;
-	DgAudioDevice* pDevices; // Multiple Devices
-};
+namespace Dragon::Audio {
+	struct EngineCreateInfo {
+		
+	};
 
-DGAPI DgResult dgCreateAudioEngine(DgAudioEngineCreateInfo createInfo, DgAudioEngine* pAudioEngine);
+	struct Engine {
+		private:
+			size_t deviceCount;
+			std::vector<Device>; // Multiple Devices
+	};
+}

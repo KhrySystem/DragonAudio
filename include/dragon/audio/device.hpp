@@ -1,7 +1,14 @@
 #pragma once
-#include "audio_core.hpp"
+#include <AL/alc.h>
+#include <AL/al.h>
+#include <AL/alext.h>
+#include <AL/efx-creative.h>
+#include <AL/efx-presets.h>
+#include <AL/efx.h>
 
-struct DgAudioDevice {
-	ALCdevice* device;
-	ALCcontext* context;
-};
+namespace Dragon::Audio {
+	struct DgAudioDevice {
+		ALCdevice* device;
+		ALCcontext* context;
+	};
+}
